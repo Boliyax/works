@@ -1,0 +1,47 @@
+name: 'Work2_Release'
+
+on:
+  push:
+    branches:
+      - work2
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+      - uses: actions/checkout@v3
+        with:  
+          submodules: true
+      - run: mkdir build && cd build && cmake -DPR_VERSION="0.1.2" ..
+      - run: cmake --build ./build
+      - run: cmake --build ./build --target test
+      - name: Get checksum
+        run: echo "checksum=$(cat ./doc/ip_filter.tsv | ./build/Release/ip_filter | md5sum)" >> $GITHUB_OUTPUT
+        id: get_checksum
+      - name: Check hash
+        run: "[ \"${{steps.get_checksum.outputs.checksum}}\" = \"24e7a7b2270daee89c64d3ca5fb3da1a  -\" ]"
+      - run: cmake --build ./build --target package
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ip_filter_release_${{ github.run_number }}
+          release_name: Release ip_filter ${{ github.run_number }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/ip_filter-1.0.0-Linux.deb
+          asset_name: ip_filter-1.0.0-Linux.deb
+          asset_content_type: application/vnd.debian.binary-package
