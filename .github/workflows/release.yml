@@ -46,7 +46,7 @@ jobs:
             working-directory: .
 
       - name: Create .nojekyll
-        run: touch docs/html/.nojekyll
+        run: sudo touch docs/html/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
