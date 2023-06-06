@@ -24,8 +24,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: print_ip_release${{ github.run_number }}
-          release_name: Release print_ip${{ github.run_number }}
+          tag_name: print_ip_release_0_1
+          release_name: Release print_ip_0_1
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -35,8 +35,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./build/print_ip-1.0.0-Linux.deb
-          asset_name: print_ip-1.0.0-Linux.deb
+          asset_path: ./build/print_ip-1.0.1-Linux.deb
+          asset_name: print_ip-1.0.1-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
       
       - name: Doxygen Action
