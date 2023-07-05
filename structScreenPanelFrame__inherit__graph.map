@@ -1,0 +1,13 @@
+<map id="ScreenPanelFrame" name="ScreenPanelFrame">
+<area shape="rect" id="node1" title="Класс каркас панели." alt="" coords="243,5,377,31"/>
+<area shape="rect" id="node2" href="$classActiveScreenPanel.html" title="Панель для взаимодействия с пользователем" alt="" coords="243,79,377,104"/>
+<area shape="rect" id="node3" href="$classBuilderPanel.html" title="Панель выбора конструируемой фигуры." alt="" coords="5,152,100,177"/>
+<area shape="rect" id="node4" href="$classCanvasPanel.html" title="Панель для взаимодействия с холстом." alt="" coords="125,152,223,177"/>
+<area shape="rect" id="node5" href="$classFieldSettingPanel.html" title="Панель для настройки параметров строителя." alt="" coords="248,152,372,177"/>
+<area shape="rect" id="node10" href="$classSaveLoadPanel.html" title="Панель для загрузки, сохранения и создания нового холста." alt="" coords="397,152,511,177"/>
+<area shape="rect" id="node11" href="$classSlider.html" title="Слайдер для настройки параметров." alt="" coords="536,152,591,177"/>
+<area shape="rect" id="node6" href="$classColorSettingPanel.html" title="Панель для настройки цвета." alt="" coords="11,225,137,251"/>
+<area shape="rect" id="node7" href="$classIntegralSettingPanel.html" title="Панель для настройки интегральных параметров." alt="" coords="162,225,301,251"/>
+<area shape="rect" id="node8" href="$classPointSettingPanel.html" title="Панель для настройки точки." alt="" coords="325,225,452,251"/>
+<area shape="rect" id="node9" href="$classRealSettingPanel.html" title="Панель для настройки вещественных параметров." alt="" coords="477,225,599,251"/>
+</map>

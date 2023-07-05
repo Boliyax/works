@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector editor: Структура FieldAccessor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector editor<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structFieldAccessor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура FieldAccessor<div class="ingroups"><a class="el" href="group__Builders.html">Builders</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура доступа к полям настройки конструктора  
+ <a href="structFieldAccessor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="graphic__primitives__builder_8hpp_source.html">graphic_primitives_builder.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0f6b543aec8707a15505cb20d48d1473"><td class="memItemLeft" align="right" valign="top"><a id="a0f6b543aec8707a15505cb20d48d1473" name="a0f6b543aec8707a15505cb20d48d1473"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>param_name</b></td></tr>
+<tr class="separator:a0f6b543aec8707a15505cb20d48d1473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc4f900fc2636aca0a14458f97dee69"><td class="memItemLeft" align="right" valign="top"><a id="a2dc4f900fc2636aca0a14458f97dee69" name="a2dc4f900fc2636aca0a14458f97dee69"></a>
+BasicTypes&#160;</td><td class="memItemRight" valign="bottom"><b>param_type</b></td></tr>
+<tr class="separator:a2dc4f900fc2636aca0a14458f97dee69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2581b625d6a5fa31afacc9ee04355324"><td class="memItemLeft" align="right" valign="top"><a id="a2581b625d6a5fa31afacc9ee04355324" name="a2581b625d6a5fa31afacc9ee04355324"></a>
+std::function&lt; BasicTypesVariant(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getter</b></td></tr>
+<tr class="separator:a2581b625d6a5fa31afacc9ee04355324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca63e98f7f1363fa81991c08f3383a4"><td class="memItemLeft" align="right" valign="top"><a id="a2ca63e98f7f1363fa81991c08f3383a4" name="a2ca63e98f7f1363fa81991c08f3383a4"></a>
+std::function&lt; void(BasicTypesVariant)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>setter</b></td></tr>
+<tr class="separator:a2ca63e98f7f1363fa81991c08f3383a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Структура доступа к полям настройки конструктора </p>
+</div><hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>src/<a class="el" href="graphic__primitives__builder_8hpp_source.html">graphic_primitives_builder.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

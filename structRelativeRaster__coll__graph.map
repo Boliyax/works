@@ -1,0 +1,6 @@
+<map id="RelativeRaster" name="RelativeRaster">
+<area shape="rect" id="node1" title="Растр с обозначением точки отсчета фигуры, для определения положения положения на холсте." alt="" coords="151,211,258,236"/>
+<area shape="rect" id="node2" href="$structRaster.html" title="Растровое изображение." alt="" coords="69,115,129,141"/>
+<area shape="rect" id="node3" href="$structBasicPoint.html" title=" " alt="" coords="5,5,193,45"/>
+<area shape="rect" id="node4" href="$structBasicPoint.html" title=" " alt="" coords="153,108,328,148"/>
+</map>

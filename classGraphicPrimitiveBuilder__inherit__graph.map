@@ -1,0 +1,5 @@
+<map id="GraphicPrimitiveBuilder" name="GraphicPrimitiveBuilder">
+<area shape="rect" id="node1" title="Строитель базового примитива" alt="" coords="31,5,189,31"/>
+<area shape="rect" id="node2" href="$classCircleBuilder.html" title="Строитель круга" alt="" coords="5,79,100,104"/>
+<area shape="rect" id="node3" href="$classLineBuilder.html" title="Строитель линии" alt="" coords="124,79,211,104"/>
+</map>

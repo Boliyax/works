@@ -1,0 +1,4 @@
+<map id="Circle" name="Circle">
+<area shape="rect" id="node1" title="Круг." alt="" coords="37,79,92,104"/>
+<area shape="rect" id="node2" href="$classGraphicPrimitive.html" title="Базовый графический примитив." alt="" coords="5,5,124,31"/>
+</map>

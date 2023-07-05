@@ -1,0 +1,7 @@
+<map id="FieldSettingPanel" name="FieldSettingPanel">
+<area shape="rect" id="node1" title="Панель для настройки параметров строителя." alt="" coords="676,45,800,70"/>
+<area shape="rect" id="node2" href="$classActiveScreenPanel.html" title="Панель для взаимодействия с пользователем" alt="" coords="493,45,627,70"/>
+<area shape="rect" id="node3" href="$structScreenPanelFrame.html" title="Класс каркас панели." alt="" coords="311,45,444,70"/>
+<area shape="rect" id="node4" href="$structBasicPoint.html" title=" " alt="" coords="12,5,187,45"/>
+<area shape="rect" id="node5" href="$structBasicPoint.html" title=" " alt="" coords="5,69,193,109"/>
+</map>

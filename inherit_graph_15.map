@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$classGraphicPrimitive.html" title="Базовый графический примитив." alt="" coords="5,31,124,56"/>
+<area shape="rect" id="node2" href="$classCircle.html" title="Круг." alt="" coords="172,5,227,31"/>
+<area shape="rect" id="node3" href="$classLine.html" title="Линия" alt="" coords="176,55,223,80"/>
+</map>

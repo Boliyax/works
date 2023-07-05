@@ -1,0 +1,7 @@
+<map id="SaveLoadPanel" name="SaveLoadPanel">
+<area shape="rect" id="node1" title="Панель для загрузки, сохранения и создания нового холста." alt="" coords="189,271,303,296"/>
+<area shape="rect" id="node2" href="$classActiveScreenPanel.html" title="Панель для взаимодействия с пользователем" alt="" coords="127,196,261,221"/>
+<area shape="rect" id="node3" href="$structScreenPanelFrame.html" title="Класс каркас панели." alt="" coords="127,108,261,133"/>
+<area shape="rect" id="node4" href="$structBasicPoint.html" title=" " alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node5" href="$structBasicPoint.html" title=" " alt="" coords="204,5,392,45"/>
+</map>

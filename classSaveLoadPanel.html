@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector editor: Класс SaveLoadPanel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector editor<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classSaveLoadPanel-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SaveLoadPanel<div class="ingroups"><a class="el" href="group__Interface.html">Interface</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Панель для загрузки, сохранения и создания нового холста.  
+ <a href="classSaveLoadPanel.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="interface_8hpp_source.html">interface.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:SaveLoadPanel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSaveLoadPanel__inherit__graph.png" border="0" usemap="#aSaveLoadPanel_inherit__map" alt="Inheritance graph"/></div>
+<map name="aSaveLoadPanel_inherit__map" id="aSaveLoadPanel_inherit__map">
+<area shape="rect" title="Панель для загрузки, сохранения и создания нового холста." alt="" coords="15,152,129,177"/>
+<area shape="rect" href="classActiveScreenPanel.html" title="Панель для взаимодействия с пользователем" alt="" coords="5,79,139,104"/>
+<area shape="rect" href="structScreenPanelFrame.html" title="Класс каркас панели." alt="" coords="5,5,139,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса SaveLoadPanel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSaveLoadPanel__coll__graph.png" border="0" usemap="#aSaveLoadPanel_coll__map" alt="Collaboration graph"/></div>
+<map name="aSaveLoadPanel_coll__map" id="aSaveLoadPanel_coll__map">
+<area shape="rect" title="Панель для загрузки, сохранения и создания нового холста." alt="" coords="189,271,303,296"/>
+<area shape="rect" href="classActiveScreenPanel.html" title="Панель для взаимодействия с пользователем" alt="" coords="127,196,261,221"/>
+<area shape="rect" href="structScreenPanelFrame.html" title="Класс каркас панели." alt="" coords="127,108,261,133"/>
+<area shape="rect" href="structBasicPoint.html" title=" " alt="" coords="5,5,180,45"/>
+<area shape="rect" href="structBasicPoint.html" title=" " alt="" coords="204,5,392,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa293bd0db9c0c350320cda59166b89da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRaster.html">Raster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveLoadPanel.html#aa293bd0db9c0c350320cda59166b89da">draw</a> () override</td></tr>
+<tr class="separator:aa293bd0db9c0c350320cda59166b89da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a6766f75f3e2ae7cb93334958177c9"><td class="memItemLeft" align="right" valign="top"><a id="a88a6766f75f3e2ae7cb93334958177c9" name="a88a6766f75f3e2ae7cb93334958177c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SaveLoadPanel</b> (const std::shared_ptr&lt; <a class="el" href="classSaveLoadController.html">SaveLoadController</a> &gt; &amp;controller_)</td></tr>
+<tr class="separator:a88a6766f75f3e2ae7cb93334958177c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5318ff762ba60aea8d9a50f7b64f9f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveLoadPanel.html#a5318ff762ba60aea8d9a50f7b64f9f2f">some_action</a> (const <a class="el" href="classAction.html">Action</a> &amp;action) override</td></tr>
+<tr class="separator:a5318ff762ba60aea8d9a50f7b64f9f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9682d669b6db5ac01d0394353afba270"><td class="memItemLeft" align="right" valign="top"><a id="a9682d669b6db5ac01d0394353afba270" name="a9682d669b6db5ac01d0394353afba270"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>press_save</b> ()</td></tr>
+<tr class="separator:a9682d669b6db5ac01d0394353afba270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038c234bf6e19bb4ded5ca5bf4e22d92"><td class="memItemLeft" align="right" valign="top"><a id="a038c234bf6e19bb4ded5ca5bf4e22d92" name="a038c234bf6e19bb4ded5ca5bf4e22d92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>press_load</b> ()</td></tr>
+<tr class="separator:a038c234bf6e19bb4ded5ca5bf4e22d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30543c4e2bdb6a2ce2a1c6c3a6577e1"><td class="memItemLeft" align="right" valign="top"><a id="ac30543c4e2bdb6a2ce2a1c6c3a6577e1" name="ac30543c4e2bdb6a2ce2a1c6c3a6577e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>press_new</b> ()</td></tr>
+<tr class="separator:ac30543c4e2bdb6a2ce2a1c6c3a6577e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef39b694cf1b84b4ee36ba354853ef53"><td class="memItemLeft" align="right" valign="top"><a id="aef39b694cf1b84b4ee36ba354853ef53" name="aef39b694cf1b84b4ee36ba354853ef53"></a>
+virtual <a class="el" href="structRaster.html">Raster</a>&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="separator:aef39b694cf1b84b4ee36ba354853ef53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0dcdab088845e89b2915758a384159"><td class="memItemLeft" align="right" valign="top"><a id="a8a0dcdab088845e89b2915758a384159" name="a8a0dcdab088845e89b2915758a384159"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>some_action</b> (const <a class="el" href="classAction.html">Action</a> &amp;action)</td></tr>
+<tr class="separator:a8a0dcdab088845e89b2915758a384159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac235dcd30fe571fbe51005f7223f84c5"><td class="memItemLeft" align="right" valign="top"><a id="ac235dcd30fe571fbe51005f7223f84c5" name="ac235dcd30fe571fbe51005f7223f84c5"></a>
+std::shared_ptr&lt; <a class="el" href="classSaveLoadController.html">SaveLoadController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>controller</b></td></tr>
+<tr class="separator:ac235dcd30fe571fbe51005f7223f84c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce9e212027f4844880fcb8e54354ec7"><td class="memItemLeft" align="right" valign="top"><a id="a8ce9e212027f4844880fcb8e54354ec7" name="a8ce9e212027f4844880fcb8e54354ec7"></a>
+<a class="el" href="structBasicPoint.html">SizePoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canvas_generate_size</b></td></tr>
+<tr class="separator:a8ce9e212027f4844880fcb8e54354ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728e2e94238f52251dbfc72da40e7fd6"><td class="memItemLeft" align="right" valign="top"><a id="a728e2e94238f52251dbfc72da40e7fd6" name="a728e2e94238f52251dbfc72da40e7fd6"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
+<tr class="separator:a728e2e94238f52251dbfc72da40e7fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structScreenPanelFrame"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structScreenPanelFrame')"><img src="closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="structScreenPanelFrame.html">ScreenPanelFrame</a></td></tr>
+<tr class="memitem:a499a37fd14e7a6ec0560bdfaa6f7207d inherit pub_attribs_structScreenPanelFrame"><td class="memItemLeft" align="right" valign="top"><a id="a499a37fd14e7a6ec0560bdfaa6f7207d" name="a499a37fd14e7a6ec0560bdfaa6f7207d"></a>
+<a class="el" href="structBasicPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = <a class="el" href="structBasicPoint.html">Point</a>()</td></tr>
+<tr class="separator:a499a37fd14e7a6ec0560bdfaa6f7207d inherit pub_attribs_structScreenPanelFrame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0d7ea12e36264d237269e402bbfe71 inherit pub_attribs_structScreenPanelFrame"><td class="memItemLeft" align="right" valign="top"><a id="adb0d7ea12e36264d237269e402bbfe71" name="adb0d7ea12e36264d237269e402bbfe71"></a>
+<a class="el" href="structBasicPoint.html">SizePoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size_vector</b> = <a class="el" href="structBasicPoint.html">SizePoint</a>()</td></tr>
+<tr class="separator:adb0d7ea12e36264d237269e402bbfe71 inherit pub_attribs_structScreenPanelFrame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Панель для загрузки, сохранения и создания нового холста. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aa293bd0db9c0c350320cda59166b89da" name="aa293bd0db9c0c350320cda59166b89da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa293bd0db9c0c350320cda59166b89da">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRaster.html">Raster</a> SaveLoadPanel::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="classActiveScreenPanel.html">ActiveScreenPanel</a>.</p>
+
+</div>
+</div>
+<a id="a5318ff762ba60aea8d9a50f7b64f9f2f" name="a5318ff762ba60aea8d9a50f7b64f9f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5318ff762ba60aea8d9a50f7b64f9f2f">&#9670;&#160;</a></span>some_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SaveLoadPanel::some_action </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAction.html">Action</a> &amp;&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="classActiveScreenPanel.html">ActiveScreenPanel</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/<a class="el" href="interface_8hpp_source.html">interface.hpp</a></li>
+<li>src/main.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="Line" name="Line">
+<area shape="rect" id="node1" title="Линия" alt="" coords="41,79,88,104"/>
+<area shape="rect" id="node2" href="$classGraphicPrimitive.html" title="Базовый графический примитив." alt="" coords="5,5,124,31"/>
+</map>
