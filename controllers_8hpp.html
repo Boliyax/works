@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector editor: Файл src/controllers.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector editor<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a>  </div>
+  <div class="headertitle"><div class="title">Файл controllers.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="file__system_8hpp_source.html">file_system.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для controllers.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="controllers_8hpp__incl.png" border="0" usemap="#asrc_2controllers_8hpp" alt=""/></div>
+<map name="asrc_2controllers_8hpp" id="asrc_2controllers_8hpp">
+<area shape="rect" title=" " alt="" coords="490,5,618,31"/>
+<area shape="rect" href="file__system_8hpp.html" title=" " alt="" coords="359,79,470,104"/>
+<area shape="rect" title=" " alt="" coords="406,313,474,339"/>
+<area shape="rect" title=" " alt="" coords="592,79,674,104"/>
+<area shape="rect" href="canvas_8hpp.html" title=" " alt="" coords="429,233,517,258"/>
+<area shape="rect" href="interpreter_8hpp.html" title=" " alt="" coords="165,152,269,177"/>
+<area shape="rect" title=" " alt="" coords="336,233,405,258"/>
+<area shape="rect" title=" " alt="" coords="381,152,448,177"/>
+<area shape="rect" href="graphic__primitives_8hpp.html" title=" " alt="" coords="199,313,350,339"/>
+<area shape="rect" href="basic__elements_8hpp.html" title=" " alt="" coords="326,387,463,412"/>
+<area shape="rect" title=" " alt="" coords="99,460,178,485"/>
+<area shape="rect" title=" " alt="" coords="176,387,223,412"/>
+<area shape="rect" title=" " alt="" coords="247,387,302,412"/>
+<area shape="rect" title=" " alt="" coords="321,460,382,485"/>
+<area shape="rect" title=" " alt="" coords="406,460,465,485"/>
+<area shape="rect" href="graphic__primitives__builder_8hpp.html" title=" " alt="" coords="134,225,260,265"/>
+<area shape="rect" title=" " alt="" coords="34,233,109,258"/>
+<area shape="rect" title=" " alt="" coords="96,313,175,339"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="controllers_8hpp__dep__incl.png" border="0" usemap="#asrc_2controllers_8hppdep" alt=""/></div>
+<map name="asrc_2controllers_8hppdep" id="asrc_2controllers_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,133,31"/>
+<area shape="rect" href="interface_8hpp.html" title=" " alt="" coords="10,79,129,104"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="21,152,117,177"/>
+</map>
+</div>
+</div>
+<p><a href="controllers_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuildController.html">BuildController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер настройки и создания фигур.  <a href="classBuildController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuildController_1_1AddingPointsController.html">BuildController::AddingPointsController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер построения фигуры при помощи добавления точек.  <a href="classBuildController_1_1AddingPointsController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuildController_1_1FieldController.html">BuildController::FieldController&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер настройки параметра строителя.  <a href="classBuildController_1_1FieldController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveLoadController.html">SaveLoadController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер загрузки, сохранения и создания холста.  <a href="classSaveLoadController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCanvasController.html">CanvasController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер холста, отвечающий за удаление фигур и отрисовку.  <a href="classCanvasController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeneralController.html">GeneralController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер дающий доступ к остальным контроллерам.  <a href="classGeneralController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

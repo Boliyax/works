@@ -76,36 +76,43 @@ $(function() {
   <div class="headertitle"><div class="title">interpreter.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef INTERPRETER</span></div>
+<a href="interpreter_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef INTERPRETER</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define INTERPRETER</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;graphic_primitives_builder.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="graphic__primitives__builder_8hpp.html">graphic_primitives_builder.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span><a class="code hl_struct" href="structGraphicPrimitive_1_1PrimitiveDescription.html">Description</a> = <a class="code hl_struct" href="structGraphicPrimitive_1_1PrimitiveDescription.html">GraphicPrimitive::PrimitiveDescription</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="interpreter_8hpp.html#a07c09e2e23feb0f8ffe4e859f9d064bc">   11</a></span><span class="keyword">using </span><a class="code hl_struct" href="structGraphicPrimitive_1_1PrimitiveDescription.html">Description</a> = <a class="code hl_struct" href="structGraphicPrimitive_1_1PrimitiveDescription.html">GraphicPrimitive::PrimitiveDescription</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>std::string b_t_variant_to_string(<span class="keyword">const</span> BasicTypesVariant &amp;variant);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>std::string <a class="code hl_function" href="interpreter_8hpp.html#aaae898224408c2285e10795b74abe15b">b_t_variant_to_string</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="basic__elements_8hpp.html#a63dab40a9cd6347b0884ab3f8e6d3768">BasicTypesVariant</a> &amp;variant);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>std::unique_ptr&lt;GraphicPrimitiveBuilder&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>builder_from_primitive_type(<span class="keyword">const</span> std::string &amp;primitive_type);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_function" href="interpreter_8hpp.html#a212077efb1982351dfc7f7759ef074ba">builder_from_primitive_type</a>(<span class="keyword">const</span> std::string &amp;primitive_type);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>std::unique_ptr&lt;GraphicPrimitiveBuilder&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>string_to_builder(<span class="keyword">const</span> std::string &amp;str);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><a class="code hl_function" href="interpreter_8hpp.html#af48f1ede93c6a30e7022e515ab85892d">string_to_builder</a>(<span class="keyword">const</span> std::string &amp;str);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">inline</span> std::unique_ptr&lt;GraphicPrimitive&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>string_to_primitive(<span class="keyword">const</span> std::string &amp;str) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">auto</span> builder = string_to_builder(str);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="interpreter_8hpp.html#ab5dd029c1079053820fb4c25da36b212">   22</a></span><a class="code hl_function" href="interpreter_8hpp.html#ab5dd029c1079053820fb4c25da36b212">string_to_primitive</a>(<span class="keyword">const</span> std::string &amp;str) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">auto</span> builder = <a class="code hl_function" href="interpreter_8hpp.html#af48f1ede93c6a30e7022e515ab85892d">string_to_builder</a>(str);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">return</span> builder-&gt;build();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>std::string primitive_to_string(<span class="keyword">const</span> <a class="code hl_class" href="classGraphicPrimitive.html">GraphicPrimitive</a> &amp;primitive);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>std::string <a class="code hl_function" href="interpreter_8hpp.html#aa45146923bf1eb8030bb7ee09c4bc97d">primitive_to_string</a>(<span class="keyword">const</span> <a class="code hl_class" href="classGraphicPrimitive.html">GraphicPrimitive</a> &amp;primitive);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasic__elements_8hpp_html_a63dab40a9cd6347b0884ab3f8e6d3768"><div class="ttname"><a href="basic__elements_8hpp.html#a63dab40a9cd6347b0884ab3f8e6d3768">BasicTypesVariant</a></div><div class="ttdeci">std::variant&lt; Point, ColorRGBA, IntegralType, RealType &gt; BasicTypesVariant</div><div class="ttdef"><b>Definition:</b> basic_elements.hpp:64</div></div>
 <div class="ttc" id="aclassGraphicPrimitive_html"><div class="ttname"><a href="classGraphicPrimitive.html">GraphicPrimitive</a></div><div class="ttdoc">Базовый графический примитив.</div><div class="ttdef"><b>Definition:</b> graphic_primitives.hpp:18</div></div>
+<div class="ttc" id="agraphic__primitives__builder_8hpp_html"><div class="ttname"><a href="graphic__primitives__builder_8hpp.html">graphic_primitives_builder.hpp</a></div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_a212077efb1982351dfc7f7759ef074ba"><div class="ttname"><a href="interpreter_8hpp.html#a212077efb1982351dfc7f7759ef074ba">builder_from_primitive_type</a></div><div class="ttdeci">std::unique_ptr&lt; GraphicPrimitiveBuilder &gt; builder_from_primitive_type(const std::string &amp;primitive_type)</div><div class="ttdef"><b>Definition:</b> interpreter.cpp:27</div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_aa45146923bf1eb8030bb7ee09c4bc97d"><div class="ttname"><a href="interpreter_8hpp.html#aa45146923bf1eb8030bb7ee09c4bc97d">primitive_to_string</a></div><div class="ttdeci">std::string primitive_to_string(const GraphicPrimitive &amp;primitive)</div><div class="ttdef"><b>Definition:</b> interpreter.cpp:88</div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_aaae898224408c2285e10795b74abe15b"><div class="ttname"><a href="interpreter_8hpp.html#aaae898224408c2285e10795b74abe15b">b_t_variant_to_string</a></div><div class="ttdeci">std::string b_t_variant_to_string(const BasicTypesVariant &amp;variant)</div><div class="ttdef"><b>Definition:</b> interpreter.cpp:3</div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_ab5dd029c1079053820fb4c25da36b212"><div class="ttname"><a href="interpreter_8hpp.html#ab5dd029c1079053820fb4c25da36b212">string_to_primitive</a></div><div class="ttdeci">std::unique_ptr&lt; GraphicPrimitive &gt; string_to_primitive(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> interpreter.hpp:22</div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_af48f1ede93c6a30e7022e515ab85892d"><div class="ttname"><a href="interpreter_8hpp.html#af48f1ede93c6a30e7022e515ab85892d">string_to_builder</a></div><div class="ttdeci">std::unique_ptr&lt; GraphicPrimitiveBuilder &gt; string_to_builder(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> interpreter.cpp:40</div></div>
 <div class="ttc" id="astructGraphicPrimitive_1_1PrimitiveDescription_html"><div class="ttname"><a href="structGraphicPrimitive_1_1PrimitiveDescription.html">GraphicPrimitive::PrimitiveDescription</a></div><div class="ttdoc">Универсальное описание фигуры.</div><div class="ttdef"><b>Definition:</b> graphic_primitives.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

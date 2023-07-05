@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector editor: Файл src/file_system.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector editor<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл file_system.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="canvas_8hpp_source.html">canvas.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interpreter_8hpp_source.html">interpreter.hpp</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для file_system.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="file__system_8hpp__incl.png" border="0" usemap="#asrc_2file__system_8hpp" alt=""/></div>
+<map name="asrc_2file__system_8hpp" id="asrc_2file__system_8hpp">
+<area shape="rect" title=" " alt="" coords="351,5,484,31"/>
+<area shape="rect" href="canvas_8hpp.html" title=" " alt="" coords="451,159,539,185"/>
+<area shape="rect" href="interpreter_8hpp.html" title=" " alt="" coords="209,79,313,104"/>
+<area shape="rect" title=" " alt="" coords="357,159,427,185"/>
+<area shape="rect" title=" " alt="" coords="480,79,547,104"/>
+<area shape="rect" href="graphic__primitives_8hpp.html" title=" " alt="" coords="375,240,526,265"/>
+<area shape="rect" title=" " alt="" coords="283,240,351,265"/>
+<area shape="rect" href="basic__elements_8hpp.html" title=" " alt="" coords="489,313,626,339"/>
+<area shape="rect" title=" " alt="" coords="411,387,490,412"/>
+<area shape="rect" title=" " alt="" coords="287,313,334,339"/>
+<area shape="rect" title=" " alt="" coords="358,313,413,339"/>
+<area shape="rect" title=" " alt="" coords="520,387,581,412"/>
+<area shape="rect" title=" " alt="" coords="605,387,664,412"/>
+<area shape="rect" href="graphic__primitives__builder_8hpp.html" title=" " alt="" coords="155,152,282,192"/>
+<area shape="rect" title=" " alt="" coords="5,159,80,185"/>
+<area shape="rect" title=" " alt="" coords="179,240,258,265"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="file__system_8hpp__dep__incl.png" border="0" usemap="#asrc_2file__system_8hppdep" alt=""/></div>
+<map name="asrc_2file__system_8hppdep" id="asrc_2file__system_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,139,31"/>
+<area shape="rect" href="controllers_8hpp.html" title=" " alt="" coords="8,79,136,104"/>
+<area shape="rect" href="interface_8hpp.html" title=" " alt="" coords="13,152,131,177"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="24,225,120,251"/>
+</map>
+</div>
+</div>
+<p><a href="file__system_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a37e65bc7ad799823aa77abc4533e8af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__system_8hpp.html#a37e65bc7ad799823aa77abc4533e8af2">upload</a> (const std::string &amp;filename, const <a class="el" href="classCanvas.html">Canvas</a> &amp;canvas)</td></tr>
+<tr class="separator:a37e65bc7ad799823aa77abc4533e8af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4084e7dd108688450c27e6d31399613"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCanvas.html">Canvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__system_8hpp.html#ae4084e7dd108688450c27e6d31399613">download</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:ae4084e7dd108688450c27e6d31399613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ae4084e7dd108688450c27e6d31399613" name="ae4084e7dd108688450c27e6d31399613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4084e7dd108688450c27e6d31399613">&#9670;&#160;</a></span>download()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCanvas.html">Canvas</a> download </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37e65bc7ad799823aa77abc4533e8af2" name="a37e65bc7ad799823aa77abc4533e8af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e65bc7ad799823aa77abc4533e8af2">&#9670;&#160;</a></span>upload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void upload </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCanvas.html">Canvas</a> &amp;&#160;</td>
+          <td class="paramname"><em>canvas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

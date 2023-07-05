@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector editor: Файл src/basic_elements.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector editor<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#concepts">Concepts</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл basic_elements.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для basic_elements.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="basic__elements_8hpp__incl.png" border="0" usemap="#asrc_2basic__elements_8hpp" alt=""/></div>
+<map name="asrc_2basic__elements_8hpp" id="asrc_2basic__elements_8hpp">
+<area shape="rect" title=" " alt="" coords="60,5,219,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,84,104"/>
+<area shape="rect" title=" " alt="" coords="109,79,170,104"/>
+<area shape="rect" title=" " alt="" coords="194,79,253,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="basic__elements_8hpp__dep__incl.png" border="0" usemap="#asrc_2basic__elements_8hppdep" alt=""/></div>
+<map name="asrc_2basic__elements_8hppdep" id="asrc_2basic__elements_8hppdep">
+<area shape="rect" title=" " alt="" coords="156,5,315,31"/>
+<area shape="rect" href="graphic__primitives_8hpp.html" title=" " alt="" coords="149,79,322,104"/>
+<area shape="rect" href="canvas_8hpp.html" title=" " alt="" coords="13,159,124,185"/>
+<area shape="rect" href="graphic__primitives_8cpp.html" title=" " alt="" coords="149,159,322,185"/>
+<area shape="rect" href="graphic__primitives__builder_8hpp.html" title=" " alt="" coords="346,152,495,192"/>
+<area shape="rect" href="canvas_8cpp.html" title=" " alt="" coords="5,247,116,273"/>
+<area shape="rect" href="file__system_8hpp.html" title=" " alt="" coords="147,328,281,353"/>
+<area shape="rect" href="controllers_8hpp.html" title=" " alt="" coords="150,401,278,427"/>
+<area shape="rect" href="interface_8hpp.html" title=" " alt="" coords="155,475,273,500"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="166,548,262,573"/>
+<area shape="rect" href="graphic__primitives__builder_8cpp.html" title=" " alt="" coords="191,240,341,280"/>
+<area shape="rect" href="interpreter_8hpp.html" title=" " alt="" coords="365,247,492,273"/>
+<area shape="rect" href="interpreter_8cpp.html" title=" " alt="" coords="365,328,492,353"/>
+</map>
+</div>
+</div>
+<p><a href="basic__elements_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBasicPoint.html">BasicPoint&lt; Coordinate, MAX_LIMIT, MIN_LIMIT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс для обозначении точки либо вектора.  <a href="structBasicPoint.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structColorRGBA.html">ColorRGBA</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Цвет в формате RGBA.  <a href="structColorRGBA.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRaster.html">Raster</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Растровое изображение.  <a href="structRaster.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRelativeRaster.html">RelativeRaster</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Растр с обозначением точки отсчета фигуры, для определения положения положения на холсте.  <a href="structRelativeRaster.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structenum__from__basic__type.html">enum_from_basic_type&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structenum__from__basic__type_3_01Point_01_4.html">enum_from_basic_type&lt; Point &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structenum__from__basic__type_3_01ColorRGBA_01_4.html">enum_from_basic_type&lt; ColorRGBA &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structenum__from__basic__type_3_01IntegralType_01_4.html">enum_from_basic_type&lt; IntegralType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structenum__from__basic__type_3_01RealType_01_4.html">enum_from_basic_type&lt; RealType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
+Concepts</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptBasicType.html">BasicType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a3242ce6bd8cfd4078d6f5a731341cd1d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a> = int</td></tr>
+<tr class="separator:a3242ce6bd8cfd4078d6f5a731341cd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185fc17446171263166d7fc0fdb3e6b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a> = float</td></tr>
+<tr class="separator:a185fc17446171263166d7fc0fdb3e6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cadba3d9b18cb4db17f5995f108cf33"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a1cadba3d9b18cb4db17f5995f108cf33">Radians</a> = <a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a></td></tr>
+<tr class="separator:a1cadba3d9b18cb4db17f5995f108cf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127efa42837558776a8d743a975f57fd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a127efa42837558776a8d743a975f57fd">Point</a> = <a class="el" href="structBasicPoint.html">BasicPoint</a>&lt; <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a0233e1e51227061172c1fe641a18a689">MAX_INTEGRAL_SIZE</a> &gt;</td></tr>
+<tr class="separator:a127efa42837558776a8d743a975f57fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e27233bd262772a558fd48d2be8842"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#ab3e27233bd262772a558fd48d2be8842">SizePoint</a> = <a class="el" href="structBasicPoint.html">BasicPoint</a>&lt; <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a0233e1e51227061172c1fe641a18a689">MAX_INTEGRAL_SIZE</a>, 0 &gt;</td></tr>
+<tr class="separator:ab3e27233bd262772a558fd48d2be8842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dab40a9cd6347b0884ab3f8e6d3768"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a63dab40a9cd6347b0884ab3f8e6d3768">BasicTypesVariant</a> = std::variant&lt; <a class="el" href="basic__elements_8hpp.html#a127efa42837558776a8d743a975f57fd">Point</a>, <a class="el" href="structColorRGBA.html">ColorRGBA</a>, <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a> &gt;</td></tr>
+<tr class="separator:a63dab40a9cd6347b0884ab3f8e6d3768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a86153c91096e21654c3735a51f83c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptBasicType.html">BasicType</a> T&gt; </td></tr>
+<tr class="memitem:a66a86153c91096e21654c3735a51f83c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a66a86153c91096e21654c3735a51f83c">enum_from_basic_type_v</a> = <a class="el" href="structenum__from__basic__type.html">enum_from_basic_type</a>&lt; T &gt;::value</td></tr>
+<tr class="separator:a66a86153c91096e21654c3735a51f83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a53dda119bc6bb5ceecaf9242483c2b51"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51">BasicTypes</a> { <a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51a78ee54aa8f813885fe2fe20d232518b9">point</a>
+, <a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51a92405437fcb5d924d16cbf26ebf510e2">color_rgba</a>
+, <a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51ad4731298d0991c5217cf7bf6c0db6890">integral_type</a>
+, <a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51a43ccba4dc7f24ce42ac3003b02ca5485">real_type</a>
+ }</td></tr>
+<tr class="memdesc:a53dda119bc6bb5ceecaf9242483c2b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечисление основных используемых типов.  <a href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51">Подробнее...</a><br /></td></tr>
+<tr class="separator:a53dda119bc6bb5ceecaf9242483c2b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a0233e1e51227061172c1fe641a18a689"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__elements_8hpp.html#a0233e1e51227061172c1fe641a18a689">MAX_INTEGRAL_SIZE</a> = 1'000'000'000</td></tr>
+<tr class="separator:a0233e1e51227061172c1fe641a18a689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a63dab40a9cd6347b0884ab3f8e6d3768" name="a63dab40a9cd6347b0884ab3f8e6d3768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63dab40a9cd6347b0884ab3f8e6d3768">&#9670;&#160;</a></span>BasicTypesVariant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a63dab40a9cd6347b0884ab3f8e6d3768">BasicTypesVariant</a> =  std::variant&lt;<a class="el" href="basic__elements_8hpp.html#a127efa42837558776a8d743a975f57fd">Point</a>, <a class="el" href="structColorRGBA.html">ColorRGBA</a>, <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66a86153c91096e21654c3735a51f83c" name="a66a86153c91096e21654c3735a51f83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a86153c91096e21654c3735a51f83c">&#9670;&#160;</a></span>enum_from_basic_type_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptBasicType.html">BasicType</a> T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a66a86153c91096e21654c3735a51f83c">enum_from_basic_type_v</a> =  <a class="el" href="structenum__from__basic__type.html">enum_from_basic_type</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3242ce6bd8cfd4078d6f5a731341cd1d" name="a3242ce6bd8cfd4078d6f5a731341cd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3242ce6bd8cfd4078d6f5a731341cd1d">&#9670;&#160;</a></span>IntegralType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a> =  int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a127efa42837558776a8d743a975f57fd" name="a127efa42837558776a8d743a975f57fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127efa42837558776a8d743a975f57fd">&#9670;&#160;</a></span>Point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a127efa42837558776a8d743a975f57fd">Point</a> =  <a class="el" href="structBasicPoint.html">BasicPoint</a>&lt;<a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a0233e1e51227061172c1fe641a18a689">MAX_INTEGRAL_SIZE</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cadba3d9b18cb4db17f5995f108cf33" name="a1cadba3d9b18cb4db17f5995f108cf33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cadba3d9b18cb4db17f5995f108cf33">&#9670;&#160;</a></span>Radians</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a1cadba3d9b18cb4db17f5995f108cf33">Radians</a> =  <a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a185fc17446171263166d7fc0fdb3e6b4" name="a185fc17446171263166d7fc0fdb3e6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185fc17446171263166d7fc0fdb3e6b4">&#9670;&#160;</a></span>RealType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#a185fc17446171263166d7fc0fdb3e6b4">RealType</a> =  float</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3e27233bd262772a558fd48d2be8842" name="ab3e27233bd262772a558fd48d2be8842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e27233bd262772a558fd48d2be8842">&#9670;&#160;</a></span>SizePoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="basic__elements_8hpp.html#ab3e27233bd262772a558fd48d2be8842">SizePoint</a> =  <a class="el" href="structBasicPoint.html">BasicPoint</a>&lt;<a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a>, <a class="el" href="basic__elements_8hpp.html#a0233e1e51227061172c1fe641a18a689">MAX_INTEGRAL_SIZE</a>, 0&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a53dda119bc6bb5ceecaf9242483c2b51" name="a53dda119bc6bb5ceecaf9242483c2b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53dda119bc6bb5ceecaf9242483c2b51">&#9670;&#160;</a></span>BasicTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="basic__elements_8hpp.html#a53dda119bc6bb5ceecaf9242483c2b51">BasicTypes</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Перечисление основных используемых типов. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a53dda119bc6bb5ceecaf9242483c2b51a78ee54aa8f813885fe2fe20d232518b9" name="a53dda119bc6bb5ceecaf9242483c2b51a78ee54aa8f813885fe2fe20d232518b9"></a>point&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a53dda119bc6bb5ceecaf9242483c2b51a92405437fcb5d924d16cbf26ebf510e2" name="a53dda119bc6bb5ceecaf9242483c2b51a92405437fcb5d924d16cbf26ebf510e2"></a>color_rgba&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a53dda119bc6bb5ceecaf9242483c2b51ad4731298d0991c5217cf7bf6c0db6890" name="a53dda119bc6bb5ceecaf9242483c2b51ad4731298d0991c5217cf7bf6c0db6890"></a>integral_type&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a53dda119bc6bb5ceecaf9242483c2b51a43ccba4dc7f24ce42ac3003b02ca5485" name="a53dda119bc6bb5ceecaf9242483c2b51a43ccba4dc7f24ce42ac3003b02ca5485"></a>real_type&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a0233e1e51227061172c1fe641a18a689" name="a0233e1e51227061172c1fe641a18a689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0233e1e51227061172c1fe641a18a689">&#9670;&#160;</a></span>MAX_INTEGRAL_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a> MAX_INTEGRAL_SIZE = 1'000'000'000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

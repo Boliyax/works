@@ -76,27 +76,27 @@ $(function() {
   <div class="headertitle"><div class="title">file_system.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FILE_SYSTEM</span></div>
+<a href="file__system_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FILE_SYSTEM</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FILE_SYSTEM</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;canvas.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;interpreter.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="canvas_8hpp.html">canvas.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="interpreter_8hpp.html">interpreter.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> upload(<span class="keyword">const</span> std::string &amp;filename, <span class="keyword">const</span> <a class="code hl_class" href="classCanvas.html">Canvas</a> &amp;canvas) {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="file__system_8hpp.html#a37e65bc7ad799823aa77abc4533e8af2">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="file__system_8hpp.html#a37e65bc7ad799823aa77abc4533e8af2">upload</a>(<span class="keyword">const</span> std::string &amp;filename, <span class="keyword">const</span> <a class="code hl_class" href="classCanvas.html">Canvas</a> &amp;canvas) {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  std::ofstream file(filename);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  file &lt;&lt; canvas.get_width_height().x &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; canvas.get_width_height().y</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  file &lt;&lt; canvas.<a class="code hl_function" href="classCanvas.html#a5ec75cd8100a45a3a79c318fda1b92ac">get_width_height</a>().<a class="code hl_variable" href="structBasicPoint.html#ae17118e2430df8fbc7da9d8dcc46e179">x</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; canvas.<a class="code hl_function" href="classCanvas.html#a5ec75cd8100a45a3a79c318fda1b92ac">get_width_height</a>().<a class="code hl_variable" href="structBasicPoint.html#abed1eae48a088b6aba7bb57b2a5f4a3e">y</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>       &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i : canvas.get_content()) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    file &lt;&lt; i.first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; primitive_to_string(*i.second) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i : canvas.<a class="code hl_function" href="classCanvas.html#ab866a3cb360305d427351246cd13b0d8">get_content</a>()) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    file &lt;&lt; i.first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_function" href="interpreter_8cpp.html#aa45146923bf1eb8030bb7ee09c4bc97d">primitive_to_string</a>(*i.second) &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_class" href="classCanvas.html">Canvas</a> download(<span class="keyword">const</span> std::string &amp;filename) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="file__system_8hpp.html#ae4084e7dd108688450c27e6d31399613">   18</a></span><a class="code hl_class" href="classCanvas.html">Canvas</a> <a class="code hl_function" href="file__system_8hpp.html#ae4084e7dd108688450c27e6d31399613">download</a>(<span class="keyword">const</span> std::string &amp;filename) {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  std::ifstream file(filename);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  std::stringstream stream;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  IntegralType width, height; <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_typedef" href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a> width, height; <span class="comment">// NOLINT</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  file &gt;&gt; width &gt;&gt; height;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_class" href="classCanvas.html">Canvas</a> canvas({width, height});</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  std::string str;</div>
@@ -104,13 +104,24 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">while</span> (file &gt;&gt; name) {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::getline(file, str);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    canvas.add_primitive(string_to_primitive(str), name);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    canvas.add_primitive(<a class="code hl_function" href="interpreter_8hpp.html#ab5dd029c1079053820fb4c25da36b212">string_to_primitive</a>(str), name);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">return</span> canvas;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasic__elements_8hpp_html_a3242ce6bd8cfd4078d6f5a731341cd1d"><div class="ttname"><a href="basic__elements_8hpp.html#a3242ce6bd8cfd4078d6f5a731341cd1d">IntegralType</a></div><div class="ttdeci">int IntegralType</div><div class="ttdef"><b>Definition:</b> basic_elements.hpp:8</div></div>
+<div class="ttc" id="acanvas_8hpp_html"><div class="ttname"><a href="canvas_8hpp.html">canvas.hpp</a></div></div>
 <div class="ttc" id="aclassCanvas_html"><div class="ttname"><a href="classCanvas.html">Canvas</a></div><div class="ttdoc">Холст, хранит примитивы, и отрисовывает изображение по запросу.</div><div class="ttdef"><b>Definition:</b> canvas.hpp:12</div></div>
+<div class="ttc" id="aclassCanvas_html_a5ec75cd8100a45a3a79c318fda1b92ac"><div class="ttname"><a href="classCanvas.html#a5ec75cd8100a45a3a79c318fda1b92ac">Canvas::get_width_height</a></div><div class="ttdeci">const SizePoint &amp; get_width_height() const</div><div class="ttdef"><b>Definition:</b> canvas.hpp:27</div></div>
+<div class="ttc" id="aclassCanvas_html_ab866a3cb360305d427351246cd13b0d8"><div class="ttname"><a href="classCanvas.html#ab866a3cb360305d427351246cd13b0d8">Canvas::get_content</a></div><div class="ttdeci">const std::map&lt; ID, PrimitiveHandle &gt; &amp; get_content() const</div><div class="ttdef"><b>Definition:</b> canvas.hpp:26</div></div>
+<div class="ttc" id="afile__system_8hpp_html_a37e65bc7ad799823aa77abc4533e8af2"><div class="ttname"><a href="file__system_8hpp.html#a37e65bc7ad799823aa77abc4533e8af2">upload</a></div><div class="ttdeci">void upload(const std::string &amp;filename, const Canvas &amp;canvas)</div><div class="ttdef"><b>Definition:</b> file_system.hpp:9</div></div>
+<div class="ttc" id="afile__system_8hpp_html_ae4084e7dd108688450c27e6d31399613"><div class="ttname"><a href="file__system_8hpp.html#ae4084e7dd108688450c27e6d31399613">download</a></div><div class="ttdeci">Canvas download(const std::string &amp;filename)</div><div class="ttdef"><b>Definition:</b> file_system.hpp:18</div></div>
+<div class="ttc" id="ainterpreter_8cpp_html_aa45146923bf1eb8030bb7ee09c4bc97d"><div class="ttname"><a href="interpreter_8cpp.html#aa45146923bf1eb8030bb7ee09c4bc97d">primitive_to_string</a></div><div class="ttdeci">std::string primitive_to_string(const GraphicPrimitive &amp;primitive)</div><div class="ttdef"><b>Definition:</b> interpreter.cpp:88</div></div>
+<div class="ttc" id="ainterpreter_8hpp_html"><div class="ttname"><a href="interpreter_8hpp.html">interpreter.hpp</a></div></div>
+<div class="ttc" id="ainterpreter_8hpp_html_ab5dd029c1079053820fb4c25da36b212"><div class="ttname"><a href="interpreter_8hpp.html#ab5dd029c1079053820fb4c25da36b212">string_to_primitive</a></div><div class="ttdeci">std::unique_ptr&lt; GraphicPrimitive &gt; string_to_primitive(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> interpreter.hpp:22</div></div>
+<div class="ttc" id="astructBasicPoint_html_abed1eae48a088b6aba7bb57b2a5f4a3e"><div class="ttname"><a href="structBasicPoint.html#abed1eae48a088b6aba7bb57b2a5f4a3e">BasicPoint::y</a></div><div class="ttdeci">Coordinate y</div><div class="ttdef"><b>Definition:</b> basic_elements.hpp:19</div></div>
+<div class="ttc" id="astructBasicPoint_html_ae17118e2430df8fbc7da9d8dcc46e179"><div class="ttname"><a href="structBasicPoint.html#ae17118e2430df8fbc7da9d8dcc46e179">BasicPoint::x</a></div><div class="ttdeci">Coordinate x</div><div class="ttdef"><b>Definition:</b> basic_elements.hpp:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
