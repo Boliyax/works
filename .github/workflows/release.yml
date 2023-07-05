@@ -24,8 +24,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: release_editor_alpha_1_0_0
-          release_name: Release vector_editor 1.0.0
+          tag_name: release_editor_1_0_0
+          release_name: Release vector editor 1.0.0
           draft: false
           prerelease: false
       - name: Upload Release Asset
