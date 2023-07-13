@@ -36,9 +36,9 @@ template <size_t SET_SIZE> class SmartBitSet {
   // Шаблонные методы выстраивающие подобие бинарного дерева, для поиска
   // свободного ряда с наименьшим индексом.
   template <size_t OFFSET = 1>
-  static inline size_t finde_first(const bitset &bits) noexcept {
+  static inline size_t find_first(const bitset &bits) noexcept {
     if constexpr (OFFSET << 1 < SET_SIZE) {
-      auto position = finde_first<OFFSET << 1>(new_or_up(bits, OFFSET));
+      auto position = find_first<OFFSET << 1>(new_or_up(bits, OFFSET));
       if (bits.test(position)) {
         return position;
       } else {
@@ -68,7 +68,7 @@ public:
 
     auto bits = data;
     if (length == 1) {
-      auto position = finde_first(bits);
+      auto position = find_first(bits);
       if (!data.test(position))
         return SET_SIZE;
       flip_bits(position, length);
@@ -82,7 +82,7 @@ public:
           unresolved_length = length;
           return SET_SIZE;
         } else {
-          auto position = finde_first(bits);
+          auto position = find_first(bits);
           flip_bits(position, length);
           return position;
         }

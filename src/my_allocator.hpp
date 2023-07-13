@@ -4,8 +4,8 @@
 #include "smart_bitset.hpp"
 #include <array>
 
-// Аллокаторы переменных одиннакового размера, и имеющие одинаковые размеры
-// пулов используют общий для них менеджер контенеров (хранилищь).
+// Аллокаторы переменных одинакового размера, и имеющие одинаковые размеры
+// пулов используют общий для них менеджер контейнеров (хранилищ).
 template <size_t N, size_t POOL_SIZE> class StaticStoreManager {
   struct Store {
     using buffer_var = std::array<unsigned char, N>;
