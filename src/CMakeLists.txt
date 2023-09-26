@@ -13,6 +13,3 @@ target_include_directories(input_controller INTERFACE "${CMAKE_CURRENT_SOURCE_DI
 add_library(libasync SHARED async.cpp async.h)
 target_link_libraries(libasync PRIVATE command_set output input_controller)
 target_include_directories(libasync INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
-
-
-
