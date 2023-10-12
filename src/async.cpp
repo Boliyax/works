@@ -10,12 +10,19 @@ namespace async {
 
 Output* output;
 unsigned int counter = 0;
+std::mutex connect_mutex;
+
+// Теперь с разными контекстами можно работать из разных потоков.
+// Но работа с отдельным контекстом должна происходить из одного потока.
 
 handle_t connect(std::size_t bulk) {
-    if(counter == 0) {
-        output = new Output();
+    {
+        std::lock_guard connect_guard(connect_mutex);
+        if(counter == 0) {
+            output = new Output();
+        }
+        ++counter;
     }
-    ++counter;
     auto p = output;
     return static_cast<void*>(new InputController(CommandSet(std::move(p), bulk)));
 }
@@ -38,9 +45,12 @@ void receive(handle_t handle, const char *data, std::size_t size) {
 void disconnect(handle_t handle) {
     static_cast<InputController<CommandSet<std::unique_ptr<Output>>>*>(handle)->end();
     delete static_cast<InputController<CommandSet<Output*>>*>(handle);
-    --counter;
-    if(counter == 0) {
-        delete output;
+    {
+        std::lock_guard connect_guard(connect_mutex);
+        --counter;
+        if(counter == 0) {
+            delete output;
+        }
     }
 }
 

@@ -13,19 +13,26 @@ class FileKeysGenerator {
 public:
 
     std::pair<time_t, uint32_t> get_keys() {
-        time_t t = std::time(nullptr);
-        if(t == last_request_time) {
-            ++secondary_key;
-        } else {
-            secondary_key =  0;
+        std::time_t t;
+        {
+            // Теперь уникальность названия гарантированна в многопоточном режиме.
+            std::lock_guard unique_key_guard(unique_key_mutex);
+            t = std::time(nullptr);
+            if(t == last_request_time) {
+                ++secondary_key;
+            } else {
+                secondary_key =  0;
+            }
+            last_request_time = t;
         }
-        last_request_time = t;
+        
         return std::make_pair(t, secondary_key);
     }
 
 private:
     time_t last_request_time = 0;
     uint32_t secondary_key = 0;
+    std::mutex unique_key_mutex;
 
 } key_generator;
 
@@ -148,5 +155,8 @@ public:
         console_thread.join();
         files_threads[0].join();
         files_threads[1].join();
+        if(files_threads[0].joinable()) {
+            end = false;
+        }
     }
 };
