@@ -82,6 +82,7 @@ public:
                         if(end) break;
                         file_output_condition.wait(lock);
                     }
+                    if(file_output_queue.empty() && end) break;
                     if(file_output_queue.front()->worked_out) {
                         file_output_queue.pop_front();
                         continue;
@@ -111,6 +112,7 @@ public:
                         if(end) break;
                         console_output_condition.wait(lock);
                     }
+                    if(console_output_queue.empty() && end) break;
                     if(console_output_queue.front().worked_out) {
                         console_output_queue.pop_front();
                         continue;
