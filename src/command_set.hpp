@@ -12,14 +12,16 @@ public:
     void add_command(std::string& s) {
         set.emplace_back(s);
         if((level == 0) && (size() >= limit)) {
-            callback->print(set);
+            //callback->print(set);
+            mixed_print();
             set.clear();
         }
     }
 
     void end_input() {
         if((level == 0) && (size() >= 1)) {
-            callback->print(set);
+            //callback->print(set);
+            mixed_print();
             set.clear();
         }
     }
@@ -27,7 +29,8 @@ public:
     void up() {
         if(level <= 0) {
             if(size() > 0) {
-                callback->print(set);
+                //callback->print(set);
+                mixed_print();
                 set.clear();
             }
         }
@@ -37,6 +40,13 @@ public:
         if(--level <= 0) {
             callback->print(set);
             set.clear();
+        }
+    }
+    void mixed_print() {
+        for(auto& i: set) {
+            std::list<std::string> tmp_list;
+            tmp_list.emplace_back(i);
+            callback->print(tmp_list);
         }
     }
     private:
