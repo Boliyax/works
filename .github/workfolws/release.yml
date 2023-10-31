@@ -1,0 +1,52 @@
+name: 'Work11_Release'
+
+on:
+  push:
+    branches:
+      - work11
+
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v3
+        with:  
+          submodules: true
+      - name: Install boost
+        uses: MarkusJx/install-boost@v2.4.4
+        id: install-boost
+        with:
+          boost_version: 1.82.0
+      - name: Configure CMake
+        run: |
+            mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE\
+            -DBoost_INCLUDE_DIR=${{steps.install-boost.outputs.BOOST_ROOT}}/include\
+            -DBoost_LIBRARY_DIRS=${{steps.install-boost.outputs.BOOST_ROOT}}/lib
+            
+        env:
+            BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
+      - run: cmake --build ./build
+      - run: cmake --build ./build --target package
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: join_server_release_1_0_0
+          release_name: Release  join_server 1.0.0
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/join_server-1.0.0-Linux.deb
+          asset_name:  join_server-1.0.0-Linux.deb
+          asset_content_type: application/vnd.debian.binary-package
