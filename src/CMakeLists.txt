@@ -1,5 +1,9 @@
 
-set(BOOST_DIR /home/runner/work/works/works/boost/boost)
+set(BOOST_DIR "/home/runner/work/works/works/boost/boost")
+
+
+SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/home/runner/work/works/works/boost/boost")
+SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/home/runner/work/works/works/boost/boos/lib")
 
 find_package(BOOST COMPONENTS system asio regex REQUIRED)
 
