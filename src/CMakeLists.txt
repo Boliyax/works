@@ -1,11 +1,7 @@
 
-set(BOOST_DIR "/home/runner/work/works/works/boost/boost")
 
 
-SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/home/runner/work/works/works/boost/boost")
-SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/home/runner/work/works/works/boost/boos/lib")
-
-find_package(Boost COMPONENTS system regex 1.82.0 REQUIRED)
+find_package(Boost 1.82.0 COMPONENTS system regex REQUIRED)
 
 
 add_executable(${PROJECT_NAME} server.cpp)
