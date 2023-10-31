@@ -43,11 +43,7 @@ public:
         }
     }
     void mixed_print() {
-        for(auto& i: set) {
-            std::list<std::string> tmp_list;
-            tmp_list.emplace_back(i);
-            callback->print(tmp_list);
-        }
+        callback->mix_print(set);
     }
     private:
     CALLBACK callback;

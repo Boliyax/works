@@ -149,6 +149,23 @@ public:
             console_output_condition.notify_all();
         }
     }
+    void mix_print(const std::list<std::string>& command_set) {
+        {
+            std::ofstream file = generate_output_file();
+            std::list<std::string> file_command_list(command_set);
+            std::unique_lock guard(file_output_queue_mutex);
+            file_output_queue.push_back(std::shared_ptr<ParallelOutputStruct>(new ParallelOutputStruct(std::move(file_command_list), std::move(file))));
+            file_output_condition.notify_all(); 
+        }
+        {
+            std::list<std::string> console_command_list(command_set);
+            for(auto& i: command_set) {
+                std::unique_lock guard(console_output_queue_mutex);
+                console_output_queue.push_back(OneThreadOutputStruct(std::list<std::string>{i}));
+            }
+            console_output_condition.notify_all();
+        }
+    }
     
     ~Output() {
         end = true;
