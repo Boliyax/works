@@ -1,0 +1,7 @@
+C:/Users/Admin/Documents/OTUS/test/build/CMakeFiles/edit_cache.dir
+C:/Users/Admin/Documents/OTUS/test/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Admin/Documents/OTUS/test/build/src/CMakeFiles/server.dir
+C:/Users/Admin/Documents/OTUS/test/build/src/CMakeFiles/database.dir
+C:/Users/Admin/Documents/OTUS/test/build/src/CMakeFiles/command_interpreter.dir
+C:/Users/Admin/Documents/OTUS/test/build/src/CMakeFiles/edit_cache.dir
+C:/Users/Admin/Documents/OTUS/test/build/src/CMakeFiles/rebuild_cache.dir
