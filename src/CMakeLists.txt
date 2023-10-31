@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
 
-find_package(BOOST REQUIRED COMPONENTS system asio regex)
+find_package(BOOST COMPONENTS system asio regex REQUIRED)
 
 
 add_executable(${PROJECT_NAME} server.cpp)
