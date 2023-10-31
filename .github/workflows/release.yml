@@ -21,7 +21,7 @@ jobs:
           boost_version: 1.82.0
       - name: Configure CMake
         run: |
-            mkdir build && cd build cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE\
+            mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE\
             -DBoost_INCLUDE_DIR=${{steps.install-boost.outputs.BOOST_ROOT}}/include\
             -DBoost_LIBRARY_DIRS=${{steps.install-boost.outputs.BOOST_ROOT}}/lib
             
