@@ -1,5 +1,5 @@
 
-set(BOOST_ROOT /home/runner/work/works/works/boost/boost)
+set(BOOST_DIR /home/runner/work/works/works/boost/boost)
 
 find_package(BOOST COMPONENTS system asio regex REQUIRED)
 
