@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
+list(POP_FRONT CMAKE_FIND_ROOT_PATH) 
+list(APPEND CMAKE_FIND_ROOT_PATH /usr/src/mxe/usr/x86_64-w64-mingw32.shared.posix)
+
 
 find_package(BOOST COMPONENTS system asio regex REQUIRED)
 
