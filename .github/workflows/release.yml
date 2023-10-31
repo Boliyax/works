@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: async_release_1_0_0
+          tag_name: bulk_server_release_1_0_0
           release_name: Release  bulk_server 1.0.0
           draft: false
           prerelease: false
