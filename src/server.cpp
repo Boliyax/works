@@ -66,6 +66,7 @@ private:
 int main(int argc, char** argv) {
      (void)argv;
      if(argc != 3) {
+          std::cout << "Requires port and static block size" << std::endl;
           return 1;
      }
      try {
