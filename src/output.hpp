@@ -40,7 +40,9 @@ private:
 
 std::ofstream generate_output_file() {
     auto [time, code] = key_generator.get_keys();
-    return std::ofstream("bulk" + std::to_string(time) + "_" + std::to_string(code) + ".log");
+    std::ofstream file("bulk" + std::to_string(time) + "_" + std::to_string(code) + ".log");
+    file << "bulk: ";
+    return file;
 }
 
 struct ParallelOutputStruct {
@@ -70,6 +72,8 @@ class Output {
     std::mutex console_output_queue_mutex;
     std::thread console_thread;
     std::array<std::thread, 2> files_threads;
+    std::list<std::string> mixed_output_list;
+    std::mutex mixed_output_mutex;
 
 public:
     void file_parallel_ouput() {
@@ -98,7 +102,8 @@ public:
                     }
                     auto command = std::move(output_point->commands.front());
                     output_point->commands.pop_front();
-                    output_point->stream << command << std::endl;
+                    output_point->stream << command;
+                    if(!output_point->commands.empty()) output_point->stream << ", ";
                 }
             }
         }
@@ -118,16 +123,19 @@ public:
                         continue;
                     }
                 }
+                std::cout << "bulk: ";
                 for(;;)
-                {
+                {   
                     if(console_output_queue.front().commands.empty()){
                         console_output_queue.front().worked_out = true;
                         break;
                     }
                     auto command = std::move(console_output_queue.front().commands.front());
                     console_output_queue.front().commands.pop_front();
-                    std::cout << command << std::endl;
+                    std::cout << command;
+                    if(!(console_output_queue.front().commands.empty())) std::cout << ", ";
                 }
+                std::cout << std::endl;
             }
         }
     }
@@ -135,6 +143,7 @@ public:
     Output(): console_thread(std::bind(&Output::console_ouput, this)),
         files_threads{std::thread(std::bind(&Output::file_parallel_ouput, this)), std::thread(std::bind(&Output::file_parallel_ouput, this))}{}
     void print(const std::list<std::string>& command_set) {
+        if(command_set.empty()) return;
         {
             std::ofstream file = generate_output_file();
             std::list<std::string> file_command_list(command_set);
@@ -149,23 +158,20 @@ public:
             console_output_condition.notify_all();
         }
     }
-    void mix_print(const std::list<std::string>& command_set) {
-        {
-            std::ofstream file = generate_output_file();
-            std::list<std::string> file_command_list(command_set);
-            std::unique_lock guard(file_output_queue_mutex);
-            file_output_queue.push_back(std::shared_ptr<ParallelOutputStruct>(new ParallelOutputStruct(std::move(file_command_list), std::move(file))));
-            file_output_condition.notify_all(); 
-        }
-        {
-            std::list<std::string> console_command_list(command_set);
-            for(auto& i: command_set) {
-                std::unique_lock guard(console_output_queue_mutex);
-                console_output_queue.push_back(OneThreadOutputStruct(std::list<std::string>{i}));
-            }
-            console_output_condition.notify_all();
-        }
+    void add_static_command(const std::string& command) {
+        std::lock_guard guard(mixed_output_mutex);
+        mixed_output_list.push_back(command);
     }
+    void mix_print(size_t s) {
+        std::lock_guard guard(mixed_output_mutex);
+        std::list<std::string> out;
+        for(; s-- ;((!mixed_output_list.empty()) && (s > 0))) {
+            out.push_back(mixed_output_list.front());
+            mixed_output_list.pop_front();
+        }
+        print(out);
+    }
+    
     
     ~Output() {
         end = true;
